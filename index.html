@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple task manager that keeps your tasks in your browser.">
+  <title>QuickTask</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow">STAY FOCUSED</p>
+      <h1>QuickTask<span>.</span></h1>
+      <p class="subtitle">A little progress every day adds up.</p>
+    </header>
+
+    <form id="task-form" class="task-form">
+      <label class="sr-only" for="task-input">New task</label>
+      <input id="task-input" maxlength="120" placeholder="What needs to get done?" autocomplete="off" required>
+      <button type="submit">Add task</button>
+    </form>
+
+    <section class="toolbar" aria-label="Task filters">
+      <p id="task-count">0 tasks</p>
+      <nav class="filters">
+        <button class="filter active" data-filter="all" type="button">All</button>
+        <button class="filter" data-filter="active" type="button">Active</button>
+        <button class="filter" data-filter="completed" type="button">Done</button>
+      </nav>
+    </section>
+
+    <ul id="task-list" class="task-list" aria-live="polite"></ul>
+    <p id="empty-state" class="empty">Nothing here yet. Add your first task above.</p>
+    <footer>Saved automatically on this device.</footer>
+  </main>
+</body>
+</html>
